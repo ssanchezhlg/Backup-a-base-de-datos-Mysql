@@ -4,8 +4,7 @@
 HOST="10.10.10.110"
 PORT="3306"
 USER="root"
-PASSWORD="radiusmaildb"
-
+PASSWORD="password"
 
 # Definir bases de datos directamente en el script
 DATABASES=('radiusmail' 'apps' 'blogs' 'catalogo')
@@ -15,7 +14,6 @@ BASEBACKUP="/srv/webinfomed"
 
 # Número de días a mantener
 dias_a_mantener=3
-
 
 LOGDIR="/var/log/BackupSQL/$FECHA_ACTUAL"
 ARCHIVO_LOG="$LOGDIR/Backup_$(date '+%Y-%m-%d_%I.%M.%S_%p').log" 
@@ -28,8 +26,6 @@ EMAIL="root@hlg.sld.cu"
 EMAILMESSAGE="/tmp/emailmessage.txt"
 
  
-
-
 # Set a value that we can use for a datestamp
 FECHA_ACTUAL=$(date +"%Y-%m-%d")
 
