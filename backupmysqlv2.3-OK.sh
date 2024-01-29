@@ -51,7 +51,6 @@ echo "* Bases de Datos a Salvar: ${DATABASES[*]}"                               
 echo -e "\n* Tamaño     Fichero"                                                                         >> $EMAILMESSAGE
 echo "----"                                                                                              >> $EMAILMESSAGE
 
-
 for DATABASE in "${DATABASES[@]}"
 do
   # Aquí puedes realizar tus operaciones de backup
@@ -59,9 +58,6 @@ do
   SIZE_AFTER=$(du -h --apparent-size $BACKUP_DIR/$DATABASE-$FECHA_ACTUAL.sql.gz | awk '{print $1}')
   printf "%-10s\t%s-%s.sql.gz\n" "$SIZE_AFTER" "$DATABASE" "$FECHA_ACTUAL"                                >> $EMAILMESSAGE
 done 
-
-
-
 
 echo "----"                                                                                               >> $EMAILMESSAGE  
 echo "==> Backup completado con éxito."                                                                   >> $EMAILMESSAGE 
