@@ -1,0 +1,1 @@
+Script en bash para hacerle backup a una base de datos que se encuentre en MariaDB
